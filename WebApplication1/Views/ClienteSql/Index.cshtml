@@ -1,0 +1,50 @@
+@model IEnumerable<WebApplication1.Models.ClienteSql>
+
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<h1>Clientes</h1>
+<a asp-action="Create" class="btn btn-success mb-3">Agregar Nuevo Cliente</a>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Codigo)</th>
+                <th>@Html.DisplayNameFor(model => model.Cedula)</th>
+                <th>@Html.DisplayNameFor(model => model.Nombres)</th>
+                <th>@Html.DisplayNameFor(model => model.Apellidos)</th>
+                <th>@Html.DisplayNameFor(model => model.FechaNacimiento)</th>
+                <th>@Html.DisplayNameFor(model => model.Mail)</th>
+                <th>@Html.DisplayNameFor(model => model.Telefono)</th>
+                <th>@Html.DisplayNameFor(model => model.Estado)</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="@(item.Estado ? "" : "inactive-row")">
+                    <td>@Html.DisplayFor(modelItem => item.Codigo)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Cedula)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Nombres)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Apellidos)</td>
+                    <td>@Html.DisplayFor(modelItem => item.FechaNacimiento)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Mail)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Telefono)</td>
+                    <td>@(item.Estado ? "Activo" : "Inactivo")</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Codigo" class="btn btn-primary">Editar</a>
+                        <a asp-action="Delete" asp-route-id="@item.Codigo" class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    .inactive-row {
+        background-color: #f8d7da; /* Color de fondo para filas inactivas */
+    }
+</style>
