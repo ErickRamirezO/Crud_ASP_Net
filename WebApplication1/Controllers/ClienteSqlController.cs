@@ -8,24 +8,24 @@ namespace WebApplication1.Controllers
 {
     public class ClienteSqlController : Controller
     {
-        private readonly ClienteSqlDataAccessLayer clienteSqlDataAccess;
+        private readonly IClienteDataAccessLayer _dataAccessLayer;
 
-        public ClienteSqlController()
+        public ClienteSqlController(IClienteDataAccessLayer dataAccessLayer)
         {
-            clienteSqlDataAccess = new ClienteSqlDataAccessLayer();
+            _dataAccessLayer = dataAccessLayer;
         }
 
         // GET: ClienteSqlController
         public IActionResult Index()
         {
-            List<ClienteSql> listaSql = clienteSqlDataAccess.GetAllClientes().ToList();
+            List<ClienteSql> listaSql = _dataAccessLayer.GetAllClientes().ToList();
             return View(listaSql);
         }
 
         // GET: ClienteSqlController/Details/5
         public IActionResult Details(int id)
         {
-            ClienteSql cliente = clienteSqlDataAccess.GetAllClientes().FirstOrDefault(c => c.Codigo == id);
+            ClienteSql cliente = _dataAccessLayer.GetAllClientes().FirstOrDefault(c => c.Codigo == id);
             if (cliente == null)
             {
                 return NotFound();
@@ -48,7 +48,7 @@ namespace WebApplication1.Controllers
             {
                 try
                 {
-                    clienteSqlDataAccess.AddCliente(cliente);
+                    _dataAccessLayer.AddCliente(cliente);
                     return RedirectToAction(nameof(Index));
                 }
                 catch
@@ -63,7 +63,7 @@ namespace WebApplication1.Controllers
         // GET: ClienteSqlController/Edit/5
         public IActionResult Edit(int id)
         {
-            ClienteSql cliente = clienteSqlDataAccess.GetAllClientes().FirstOrDefault(c => c.Codigo == id);
+            ClienteSql cliente = _dataAccessLayer.GetAllClientes().FirstOrDefault(c => c.Codigo == id);
             if (cliente == null)
             {
                 return NotFound();
@@ -83,7 +83,7 @@ namespace WebApplication1.Controllers
 
             if (ModelState.IsValid)
             {
-                clienteSqlDataAccess.UpdateCliente(cliente);
+                _dataAccessLayer.UpdateCliente(cliente);
                 return RedirectToAction(nameof(Index));
             }
             return View(cliente);
@@ -92,7 +92,7 @@ namespace WebApplication1.Controllers
         // GET: ClienteSqlController/Delete/5
         public ActionResult Delete(int id)
         {
-            var cliente = clienteSqlDataAccess.GetClienteById(id);
+            var cliente = _dataAccessLayer.GetClienteById(id);
             if (cliente == null)
             {
                 return NotFound();
@@ -108,7 +108,7 @@ namespace WebApplication1.Controllers
         {
             try
             {
-                clienteSqlDataAccess.DeleteCliente(Codigo);
+                _dataAccessLayer.DeleteCliente(Codigo);
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)

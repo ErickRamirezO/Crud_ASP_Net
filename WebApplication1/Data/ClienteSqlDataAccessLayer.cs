@@ -5,7 +5,7 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Data
 {
-    public class ClienteSqlDataAccessLayer
+    public class ClienteSqlDataAccessLayer : IClienteDataAccessLayer
     {
         private readonly string connectionString = "Data Source=DESKTOP-6E8QHVK\\ERICK; Initial Catalog=dbproductos; user ID=erick; Password=erick";
 
