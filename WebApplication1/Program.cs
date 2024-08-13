@@ -15,9 +15,12 @@ if (databaseProvider == "SQLServer")
 else if (databaseProvider == "Postgres")
 {
     builder.Services.AddScoped<IClienteDataAccessLayer, ClientePostgresDataAccessLayer>();
+<<<<<<< HEAD
 }else if (databaseProvider == "MySQL")
 {
     builder.Services.AddScoped<IClienteDataAccessLayer, ClienteMySqlDataAccessLayer>();
+=======
+>>>>>>> be8ba1108549c54a0645ae699938e3b2ec7d9f67
 }
 else
 {

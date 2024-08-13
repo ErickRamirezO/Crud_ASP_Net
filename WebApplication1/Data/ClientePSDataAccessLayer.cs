@@ -123,7 +123,7 @@ namespace WebApplication1.Data
                 cmd.Parameters.AddWithValue("@Telefono", cliente.Telefono);
                 cmd.Parameters.AddWithValue("@Estado", cliente.Estado);
                 cmd.Parameters.AddWithValue("@Codigo", cliente.Codigo);
-
+// 
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();

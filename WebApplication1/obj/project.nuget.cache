@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "bbegofWWqTA=",
+=======
+  "dgSpecHash": "4FXqRMUMzfw=",
+>>>>>>> be8ba1108549c54a0645ae699938e3b2ec7d9f67
   "success": true,
   "projectFilePath": "d:\\Pruebas de Software\\aspnet\\WebApplication1\\WebApplication1.csproj",
   "expectedPackageFiles": [

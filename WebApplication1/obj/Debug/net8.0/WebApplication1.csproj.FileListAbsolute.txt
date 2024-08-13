@@ -1,11 +1,11 @@
+d:\Pruebas de Software\aspnet\WebApplication1\bin\Debug\net8.0\WebApplication1.exe
+d:\Pruebas de Software\aspnet\WebApplication1\bin\Debug\net8.0\WebApplication1.dll
+d:\Pruebas de Software\aspnet\WebApplication1\bin\Debug\net8.0\WebApplication1.pdb
 d:\Pruebas de Software\aspnet\WebApplication1\bin\Debug\net8.0\appsettings.Development.json
 d:\Pruebas de Software\aspnet\WebApplication1\bin\Debug\net8.0\appsettings.json
 d:\Pruebas de Software\aspnet\WebApplication1\bin\Debug\net8.0\WebApplication1.staticwebassets.runtime.json
-d:\Pruebas de Software\aspnet\WebApplication1\bin\Debug\net8.0\WebApplication1.exe
 d:\Pruebas de Software\aspnet\WebApplication1\bin\Debug\net8.0\WebApplication1.deps.json
 d:\Pruebas de Software\aspnet\WebApplication1\bin\Debug\net8.0\WebApplication1.runtimeconfig.json
-d:\Pruebas de Software\aspnet\WebApplication1\bin\Debug\net8.0\WebApplication1.dll
-d:\Pruebas de Software\aspnet\WebApplication1\bin\Debug\net8.0\WebApplication1.pdb
 d:\Pruebas de Software\aspnet\WebApplication1\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 d:\Pruebas de Software\aspnet\WebApplication1\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 d:\Pruebas de Software\aspnet\WebApplication1\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
@@ -25,6 +25,7 @@ d:\Pruebas de Software\aspnet\WebApplication1\obj\Debug\net8.0\WebApplication1.c
 d:\Pruebas de Software\aspnet\WebApplication1\obj\Debug\net8.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cache
 d:\Pruebas de Software\aspnet\WebApplication1\obj\Debug\net8.0\WebApplication1.RazorAssemblyInfo.cache
 d:\Pruebas de Software\aspnet\WebApplication1\obj\Debug\net8.0\WebApplication1.RazorAssemblyInfo.cs
+d:\Pruebas de Software\aspnet\WebApplication1\obj\Debug\net8.0\WebApplication1.sourcelink.json
 d:\Pruebas de Software\aspnet\WebApplication1\obj\Debug\net8.0\staticwebassets.build.json
 d:\Pruebas de Software\aspnet\WebApplication1\obj\Debug\net8.0\staticwebassets.development.json
 d:\Pruebas de Software\aspnet\WebApplication1\obj\Debug\net8.0\staticwebassets\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props
