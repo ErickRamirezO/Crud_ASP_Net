@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Pruebas de Software\\aspnet\\WebApplication1\\WebApplication1.csproj": {}
+    "d:\\Pruebas de Software\\aspnet\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "D:\\Pruebas de Software\\aspnet\\WebApplication1\\WebApplication1.csproj": {
+    "d:\\Pruebas de Software\\aspnet\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pruebas de Software\\aspnet\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "d:\\Pruebas de Software\\aspnet\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "D:\\Pruebas de Software\\aspnet\\WebApplication1\\WebApplication1.csproj",
+        "projectPath": "d:\\Pruebas de Software\\aspnet\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "D:\\Pruebas de Software\\aspnet\\WebApplication1\\obj\\",
+        "outputPath": "d:\\Pruebas de Software\\aspnet\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,6 +53,10 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.2, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",

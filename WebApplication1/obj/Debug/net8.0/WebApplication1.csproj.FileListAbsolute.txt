@@ -41,3 +41,6 @@ d:\Pruebas de Software\aspnet\WebApplication1\obj\Debug\net8.0\refint\WebApplica
 d:\Pruebas de Software\aspnet\WebApplication1\obj\Debug\net8.0\WebApplication1.pdb
 d:\Pruebas de Software\aspnet\WebApplication1\obj\Debug\net8.0\WebApplication1.genruntimeconfig.cache
 d:\Pruebas de Software\aspnet\WebApplication1\obj\Debug\net8.0\ref\WebApplication1.dll
+d:\Pruebas de Software\aspnet\WebApplication1\bin\Debug\net8.0\MySqlConnector.dll
+d:\Pruebas de Software\aspnet\WebApplication1\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+d:\Pruebas de Software\aspnet\WebApplication1\obj\Debug\net8.0\WebApplication1.sourcelink.json

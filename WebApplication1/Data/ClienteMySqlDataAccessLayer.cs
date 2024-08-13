@@ -1,25 +1,25 @@
+using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
+using MySqlConnector;
 using WebApplication1.Models;
 
 namespace WebApplication1.Data
 {
-    public class ClienteSqlDataAccessLayer : IClienteDataAccessLayer
+    public class ClienteMySqlDataAccessLayer : IClienteDataAccessLayer
     {
-        private readonly string connectionString = "Data Source=DESKTOP-6E8QHVK\\ERICK; Initial Catalog=dbproductos; user ID=erick; Password=erick";
+        private readonly string connectionString = "Server=localhost; Port=3306; Database=dbproductos; User ID=root; Password=;";
 
         // Obtener todos los clientes
         public IEnumerable<ClienteSql> GetAllClientes()
         {
             List<ClienteSql> lst = new List<ClienteSql>();
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (MySqlConnection con = new MySqlConnection(connectionString))
             {
-                SqlCommand cmd = new SqlCommand("cliente_SelectAll", con);
-                cmd.CommandType = CommandType.StoredProcedure;
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM Clientes;", con); // Consulta SQL directa
 
                 con.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+                MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     ClienteSql cliente = new ClienteSql
@@ -44,14 +44,13 @@ namespace WebApplication1.Data
         public ClienteSql GetClienteById(int id)
         {
             ClienteSql cliente = null;
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (MySqlConnection con = new MySqlConnection(connectionString))
             {
-                SqlCommand cmd = new SqlCommand("cliente_SelectById", con);
-                cmd.CommandType = CommandType.StoredProcedure;
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM Clientes WHERE Codigo = @Codigo;", con); // Consulta SQL directa
                 cmd.Parameters.AddWithValue("@Codigo", id);
 
                 con.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+                MySqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
                     cliente = new ClienteSql
@@ -74,10 +73,11 @@ namespace WebApplication1.Data
         // Agregar un nuevo cliente
         public void AddCliente(ClienteSql cliente)
         {
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (MySqlConnection con = new MySqlConnection(connectionString))
             {
-                SqlCommand cmd = new SqlCommand("cliente_Insert", con);
-                cmd.CommandType = CommandType.StoredProcedure;
+                MySqlCommand cmd = new MySqlCommand(
+                    "INSERT INTO Clientes (Cedula, Apellidos, Nombres, FechaNacimiento, Mail, Telefono, Estado) " +
+                    "VALUES (@Cedula, @Apellidos, @Nombres, @FechaNacimiento, @Mail, @Telefono, @Estado);", con); // Consulta SQL directa
 
                 cmd.Parameters.AddWithValue("@Cedula", cliente.Cedula);
                 cmd.Parameters.AddWithValue("@Apellidos", cliente.Apellidos);
@@ -96,10 +96,12 @@ namespace WebApplication1.Data
         // Actualizar un cliente existente
         public void UpdateCliente(ClienteSql cliente)
         {
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (MySqlConnection con = new MySqlConnection(connectionString))
             {
-                SqlCommand cmd = new SqlCommand("cliente_Update", con);
-                cmd.CommandType = CommandType.StoredProcedure;
+                MySqlCommand cmd = new MySqlCommand(
+                    "UPDATE Clientes SET Cedula = @Cedula, Apellidos = @Apellidos, Nombres = @Nombres, " +
+                    "FechaNacimiento = @FechaNacimiento, Mail = @Mail, Telefono = @Telefono, Estado = @Estado " +
+                    "WHERE Codigo = @Codigo;", con); // Consulta SQL directa
 
                 cmd.Parameters.AddWithValue("@Codigo", cliente.Codigo);
                 cmd.Parameters.AddWithValue("@Cedula", cliente.Cedula);
@@ -119,10 +121,9 @@ namespace WebApplication1.Data
         // Eliminar un cliente por ID
         public void DeleteCliente(int id)
         {
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (MySqlConnection con = new MySqlConnection(connectionString))
             {
-                SqlCommand cmd = new SqlCommand("cliente_Delete", con);
-                cmd.CommandType = CommandType.StoredProcedure;
+                MySqlCommand cmd = new MySqlCommand("DELETE FROM Clientes WHERE Codigo = @Codigo;", con); // Consulta SQL directa
                 cmd.Parameters.AddWithValue("@Codigo", id);
 
                 con.Open();
