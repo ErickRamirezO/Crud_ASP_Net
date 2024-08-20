@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Pruebas de Software\\aspnet\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{49924E6C-7878-4388-BFEB-159C05E764A1}|SpecFlowTest\\SpecFlowTest.csproj|d:\\pruebas de software\\aspnet\\specflowtest\\stepdefinitions\\calculatorstepdefinitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49924E6C-7878-4388-BFEB-159C05E764A1}|SpecFlowTest\\SpecFlowTest.csproj|solutionrelative:specflowtest\\stepdefinitions\\calculatorstepdefinitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Pruebas de Software\\aspnet\\WebApplication1\\Models\\Calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebApplication1\\Models\\Calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Pruebas de Software\\aspnet\\WebApplication1\\Models\\Nuevo archivo||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebApplication1\\Models\\Nuevo archivo||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49924E6C-7878-4388-BFEB-159C05E764A1}|SpecFlowTest\\SpecFlowTest.csproj|d:\\pruebas de software\\aspnet\\specflowtest\\features\\calculator.feature||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{49924E6C-7878-4388-BFEB-159C05E764A1}|SpecFlowTest\\SpecFlowTest.csproj|solutionrelative:specflowtest\\features\\calculator.feature||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Calculator.cs",
+              "DocumentMoniker": "D:\\Pruebas de Software\\aspnet\\WebApplication1\\Models\\Calculator.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\Calculator.cs",
+              "ToolTip": "D:\\Pruebas de Software\\aspnet\\WebApplication1\\Models\\Calculator.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\Calculator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T13:38:28.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Nuevo archivo",
+              "DocumentMoniker": "D:\\Pruebas de Software\\aspnet\\WebApplication1\\Models\\Nuevo archivo",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\Nuevo archivo",
+              "ToolTip": "D:\\Pruebas de Software\\aspnet\\WebApplication1\\Models\\Nuevo archivo",
+              "RelativeToolTip": "WebApplication1\\Models\\Nuevo archivo",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-15T13:37:58.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CalculatorStepDefinitions.cs",
+              "DocumentMoniker": "D:\\Pruebas de Software\\aspnet\\SpecFlowTest\\StepDefinitions\\CalculatorStepDefinitions.cs",
+              "RelativeDocumentMoniker": "SpecFlowTest\\StepDefinitions\\CalculatorStepDefinitions.cs",
+              "ToolTip": "D:\\Pruebas de Software\\aspnet\\SpecFlowTest\\StepDefinitions\\CalculatorStepDefinitions.cs",
+              "RelativeToolTip": "SpecFlowTest\\StepDefinitions\\CalculatorStepDefinitions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T13:33:43.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Calculator.feature",
+              "DocumentMoniker": "D:\\Pruebas de Software\\aspnet\\SpecFlowTest\\Features\\Calculator.feature",
+              "RelativeDocumentMoniker": "SpecFlowTest\\Features\\Calculator.feature",
+              "ToolTip": "D:\\Pruebas de Software\\aspnet\\SpecFlowTest\\Features\\Calculator.feature",
+              "RelativeToolTip": "SpecFlowTest\\Features\\Calculator.feature",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-15T13:29:12.93Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

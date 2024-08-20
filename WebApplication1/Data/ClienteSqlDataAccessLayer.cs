@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -31,7 +32,8 @@ namespace WebApplication1.Data
                         FechaNacimiento = Convert.ToDateTime(reader["FechaNacimiento"]),
                         Mail = reader["Mail"].ToString(),
                         Telefono = reader["Telefono"].ToString(),
-                        Estado = Convert.ToBoolean(reader["Estado"])
+                        Estado = Convert.ToBoolean(reader["Estado"]),
+                        Saldo = Convert.ToDecimal(reader["Saldo"]) // Agregado el campo Saldo
                     };
                     lst.Add(cliente);
                 }
@@ -63,7 +65,8 @@ namespace WebApplication1.Data
                         FechaNacimiento = Convert.ToDateTime(reader["FechaNacimiento"]),
                         Mail = reader["Mail"].ToString(),
                         Telefono = reader["Telefono"].ToString(),
-                        Estado = Convert.ToBoolean(reader["Estado"])
+                        Estado = Convert.ToBoolean(reader["Estado"]),
+                        Saldo = Convert.ToDecimal(reader["Saldo"]) // Agregado el campo Saldo
                     };
                 }
                 con.Close();
@@ -86,6 +89,7 @@ namespace WebApplication1.Data
                 cmd.Parameters.AddWithValue("@Mail", cliente.Mail);
                 cmd.Parameters.AddWithValue("@Telefono", cliente.Telefono);
                 cmd.Parameters.AddWithValue("@Estado", cliente.Estado);
+                cmd.Parameters.AddWithValue("@Saldo", cliente.Saldo); // Agregado el campo Saldo
 
                 con.Open();
                 cmd.ExecuteNonQuery();
@@ -109,6 +113,7 @@ namespace WebApplication1.Data
                 cmd.Parameters.AddWithValue("@Mail", cliente.Mail);
                 cmd.Parameters.AddWithValue("@Telefono", cliente.Telefono);
                 cmd.Parameters.AddWithValue("@Estado", cliente.Estado);
+                cmd.Parameters.AddWithValue("@Saldo", cliente.Saldo); // Agregado el campo Saldo
 
                 con.Open();
                 cmd.ExecuteNonQuery();

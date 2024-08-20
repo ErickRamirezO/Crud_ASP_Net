@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Rk5r4CxiufY=",
+  "dgSpecHash": "WARCWRZMuzs=",
   "success": true,
   "projectFilePath": "D:\\Pruebas de Software\\aspnet\\MSTest\\MSTest.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "C:\\Users\\USER\\.nuget\\packages\\selenium.firefox.webdriver\\0.27.0\\selenium.firefox.webdriver.0.27.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\selenium.support\\4.23.0\\selenium.support.4.23.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\selenium.webdriver\\4.23.0\\selenium.webdriver.4.23.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\seleniumextras.waithelpers\\1.0.2\\seleniumextras.waithelpers.1.0.2.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
   ],
   "logs": []

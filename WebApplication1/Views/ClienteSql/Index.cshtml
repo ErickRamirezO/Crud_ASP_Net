@@ -17,6 +17,7 @@
                 <th>@Html.DisplayNameFor(model => model.FechaNacimiento)</th>
                 <th>@Html.DisplayNameFor(model => model.Mail)</th>
                 <th>@Html.DisplayNameFor(model => model.Telefono)</th>
+                <th>@Html.DisplayNameFor(model => model.Saldo)</th>
                 <th>@Html.DisplayNameFor(model => model.Estado)</th>
                 <th>Acciones</th>
             </tr>
@@ -32,6 +33,7 @@
                     <td>@Html.DisplayFor(modelItem => item.FechaNacimiento)</td>
                     <td>@Html.DisplayFor(modelItem => item.Mail)</td>
                     <td>@Html.DisplayFor(modelItem => item.Telefono)</td>
+                    <th>@Html.DisplayFor(modelItem => item.Saldo)</th>
                     <td>@(item.Estado ? "Activo" : "Inactivo")</td>
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.Codigo" class="btn btn-primary">Editar</a>

@@ -5,55 +5,111 @@
 }
 
 <h1>Editar Cliente</h1>
-<div class="row">
-    <div class="col-md-8">
-        <h4>Cliente</h4>
-    </div>
-    <div class="col-md-4">
-        <button type="submit" class="btn btn-primary pull-right">Guardar</button>
-        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
-    </div>
-</div>
-<hr />
+
 <form asp-action="Edit">
     <div class="form-group">
-        <label asp-for="Codigo" class="control-label"></label>
-        <input asp-for="Codigo" class="form-control" readonly />
-        <span asp-validation-for="Codigo" class="text-danger"></span>
-    </div>
-    <div class="form-group">
         <label asp-for="Cedula" class="control-label"></label>
-        <input asp-for="Cedula" class="form-control" />
+        <input asp-for="Cedula" class="form-control" readonly />
         <span asp-validation-for="Cedula" class="text-danger"></span>
     </div>
+
     <div class="form-group">
-        <label asp-for="Nombres" class="control-label"></label>
-        <input asp-for="Nombres" class="form-control" />
-        <span asp-validation-for="Nombres" class="text-danger"></span>
+        <label asp-for="Provincia" class="control-label"></label>
+        <select asp-for="Provincia" class="form-control" disabled>
+            <option value="01" selected="@(Model.Provincia == "01")">Azuay</option>
+            <option value="02" selected=@(Model.Provincia == "02")>Bolívar</option>
+            <option value="03" selected="@(Model.Provincia == "03")">Cañar</option>
+            <option value="04" selected="@(Model.Provincia == "04")">Carchi</option>
+            <option value="05" selected="@(Model.Provincia == "05")">Cotopaxi</option>
+            <option value="06" selected="@(Model.Provincia == "06")">Chimborazo</option>
+            <option value="07" selected="@(Model.Provincia == "07")">El Oro</option>
+            <option value="08" selected="@(Model.Provincia == "08")">Esmeraldas</option>
+            <option value="09" selected="@(Model.Provincia == "09")">Guayas</option>
+            <option value="10" selected="@(Model.Provincia == "10")">Imbabura</option>
+            <option value="11" selected="@(Model.Provincia == "11")">Loja</option>
+            <option value="12" selected="@(Model.Provincia == "12")">Los Ríos</option>
+            <option value="13" selected="@(Model.Provincia == "13")">Manabí</option>
+            <option value="14" selected="@(Model.Provincia == "14")">Morona Santiago</option>
+            <option value="15" selected="@(Model.Provincia == "15")">Napo</option>
+            <option value="16" selected="@(Model.Provincia == "16")">Pastaza</option>
+            <option value="17" selected="@(Model.Provincia == "17")">Pichincha</option>
+            <option value="18" selected="@(Model.Provincia == "18")">Tungurahua</option>
+            <option value="19" selected="@(Model.Provincia == "19")">Zamora Chinchipe</option>
+            <option value="20" selected="@(Model.Provincia == "20")">Galápagos</option>
+            <option value="21" selected="@(Model.Provincia == "21")">Sucumbíos</option>
+            <option value="22" selected="@(Model.Provincia == "22")">Orellana</option>
+            <option value="23" selected="@(Model.Provincia == "23")">Santo Domingo de los Tsáchilas</option>
+            <option value="24" selected="@(Model.Provincia == "24")">Santa Elena</option>
+            <option value="30" selected="@(Model.Provincia == "30")">Extranjeros</option>
+        </select>
+        <span asp-validation-for="Provincia" class="text-danger"></span>
     </div>
+
     <div class="form-group">
         <label asp-for="Apellidos" class="control-label"></label>
         <input asp-for="Apellidos" class="form-control" />
         <span asp-validation-for="Apellidos" class="text-danger"></span>
     </div>
+
+    <div class="form-group">
+        <label asp-for="Nombres" class="control-label"></label>
+        <input asp-for="Nombres" class="form-control" />
+        <span asp-validation-for="Nombres" class="text-danger"></span>
+    </div>
+
     <div class="form-group">
         <label asp-for="FechaNacimiento" class="control-label"></label>
         <input asp-for="FechaNacimiento" class="form-control" type="date" />
         <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
     </div>
+
     <div class="form-group">
         <label asp-for="Mail" class="control-label"></label>
-        <input asp-for="Mail" class="form-control" />
+        <input asp-for="Mail" class="form-control" type="email" />
         <span asp-validation-for="Mail" class="text-danger"></span>
     </div>
+
     <div class="form-group">
         <label asp-for="Telefono" class="control-label"></label>
         <input asp-for="Telefono" class="form-control" />
         <span asp-validation-for="Telefono" class="text-danger"></span>
     </div>
+
     <div class="form-group">
         <label asp-for="Estado" class="control-label"></label>
         <input asp-for="Estado" type="checkbox" />
         <span asp-validation-for="Estado" class="text-danger"></span>
     </div>
+
+    <div class="form-group">
+        <label asp-for="Saldo" class="control-label"></label>
+        <input asp-for="Saldo" class="form-control" id="SaldoInput" />
+        <input type="hidden" id="OriginalSaldo" value="@Model.Saldo" />
+        <span asp-validation-for="Saldo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Guardar" class="btn btn-primary" />
+    </div>
 </form>
+
+<div>
+    <a asp-action="Index">Regresar a la lista</a>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var saldoInput = document.getElementById('SaldoInput');
+            var originalSaldo = document.getElementById('OriginalSaldo').value;
+
+            saldoInput.addEventListener('input', function () {
+                var saldoValue = parseFloat(saldoInput.value);
+                if (isNaN(saldoValue) || saldoValue < 0) {
+                    alert("El saldo no puede ser negativo. Se restaurará el valor original.");
+                    saldoInput.value = originalSaldo;
+                }
+            });
+        });
+    </script>
+}

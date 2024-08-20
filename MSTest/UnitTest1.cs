@@ -13,10 +13,10 @@ namespace MSTest
         private By googleSearchBox = By.Id("APjFqb");
         private By googleButtonSearch = By.Name("btnK");
         private By googleSearchResult = By.Id("_mly7ZuXpJo-YwbkPreH04A8_33");
-        private By deleteButton = By.CssSelector("button[type='submit']");
-        private By editButton = By.CssSelector("button[type='submit']");
-        private By saveButton = By.CssSelector("button[type='submit']");
-        private By createButton = By.CssSelector("input[type='submit']");
+        
+        public By sendButton = By.Id("send");
+        public By submitButton = By.CssSelector("input[type='submit'][value='Crear']");
+        public int customerId = 11;
 
         // variables para determinar cuanto va a tardar la prueba
         private int waitTime = 3000;
@@ -24,8 +24,8 @@ namespace MSTest
         public WebTests()
         {
             // Ruta al ChromeDriver
-            string chromeDriverPath = Path.Combine(Directory.GetCurrentDirectory(), "drivers");
-            driver = new ChromeDriver(chromeDriverPath);
+            // string chromeDriverPath = Path.Combine(Directory.GetCurrentDirectory(), "drivers");
+            driver = new ChromeDriver();
         }
 
         [TestInitialize]
@@ -63,44 +63,50 @@ namespace MSTest
             driver.Navigate().GoToUrl("http://localhost:5043/ClienteSql/Create");
             Thread.Sleep(waitTime);
 
-            driver.FindElement(By.Id("Cedula")).SendKeys("1234567890");
-            driver.FindElement(By.Id("Nombres")).SendKeys("Juan Pérez");
-            driver.FindElement(By.Id("Apellidos")).SendKeys("Pérez García");
-            driver.FindElement(By.Id("FechaNacimiento")).SendKeys("1990-01-01");
-            driver.FindElement(By.Id("Mail")).SendKeys("juan.perez@example.com");
+            // Seleccionar "Tungurahua" en el dropdown de provincias
+            var provinciaSelect = new SelectElement(driver.FindElement(By.Id("ProvinciaSelect")));
+            provinciaSelect.SelectByText("Tungurahua");
+
+            driver.FindElement(By.Id("CedulaInput")).SendKeys("1234554890");
+            driver.FindElement(By.Id("Nombres")).SendKeys("Sara Estefania");
+            driver.FindElement(By.Id("Apellidos")).SendKeys("Ortiz García");
+            driver.FindElement(By.Id("FechaNacimiento")).SendKeys("1990-05-01");
+            driver.FindElement(By.Id("Mail")).SendKeys("sarae@example.com");
             driver.FindElement(By.Id("Telefono")).SendKeys("0123456789");
             driver.FindElement(By.Id("Estado")).Click(); // Activo
-
-            driver.FindElement(createButton).Click();
+            driver.FindElement(By.Id("SaldoInput")).SendKeys("125");
+            Thread.Sleep(waitTime);
+            driver.FindElement(submitButton).Click();
             Thread.Sleep(waitTime);
 
-            Assert.AreNotEqual(driver.Url, "http://localhost:5043/ClienteSql/Create");
+            driver.Navigate().GoToUrl("http://localhost:5043/ClienteSql"); 
+            Thread.Sleep(6000);
         }
 
 
         [TestMethod]
         public void TestEditCustomer()
         {
-            driver.Navigate().GoToUrl("http://localhost:5043/ClienteSql/Edit/7"); 
+            driver.Navigate().GoToUrl($"http://localhost:5043/ClienteSql/Edit/{customerId}"); 
             Thread.Sleep(waitTime);
 
             driver.FindElement(By.Id("Cedula")).Clear();
             driver.FindElement(By.Id("Cedula")).SendKeys("9876543210");
 
             Thread.Sleep(waitTime);
-            driver.FindElement(saveButton).Click();
+            driver.FindElement(sendButton).Click();
         }
 
         [TestMethod]
         public void TestDeleteCustomer()
         {
-            driver.Navigate().GoToUrl("http://localhost:5043/ClienteSql/Delete/7"); 
+            driver.Navigate().GoToUrl($"http://localhost:5043/ClienteSql/Delete/{customerId}"); 
             Thread.Sleep(waitTime);
 
-            driver.FindElement(deleteButton).Click();
+            driver.FindElement(sendButton).Click();
             Thread.Sleep(waitTime);
 
-            Assert.AreNotEqual(driver.Url, "http://localhost:5043/ClienteSql/Delete/7"); 
+            Assert.AreNotEqual(driver.Url, $"http://localhost:5043/ClienteSql/Delete/{customerId}"); 
         }
     }
 }

@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MSTest",
+    "\\SpecFlowTest",
+    "\\SpecFlowTest\\Features",
+    "\\SpecFlowTest\\StepDefinitions",
+    "\\WebApplication1",
+    "\\WebApplication1\\Models"
   ],
-  "SelectedNode": "\\aspnet.sln",
+  "SelectedNode": "\\SpecFlowTest",
   "PreviewInSolutionExplorer": false
 }

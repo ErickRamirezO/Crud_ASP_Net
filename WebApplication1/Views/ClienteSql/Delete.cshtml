@@ -32,7 +32,7 @@
     
     <form asp-action="DeleteConfirmed" method="post">
         <input type="hidden" name="Codigo" value="@Model.Codigo" />
-        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <button type="submit" id="send" class="btn btn-danger">Eliminar</button>
         <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
     </form>
 </div>

@@ -8,55 +8,123 @@
 
 <form asp-action="Create">
     <div class="form-group">
+        <label asp-for="Provincia" class="control-label"></label>
+        <select asp-for="Provincia" class="form-control" id="ProvinciaSelect">
+            <option value="01">Azuay</option>
+            <option value="02">Bolívar</option>
+            <option value="03">Cañar</option>
+            <option value="04">Carchi</option>
+            <option value="05">Cotopaxi</option>
+            <option value="06">Chimborazo</option>
+            <option value="07">El Oro</option>
+            <option value="08">Esmeraldas</option>
+            <option value="09">Guayas</option>
+            <option value="10">Imbabura</option>
+            <option value="11">Loja</option>
+            <option value="12">Los Ríos</option>
+            <option value="13">Manabí</option>
+            <option value="14">Morona Santiago</option>
+            <option value="15">Napo</option>
+            <option value="16">Pastaza</option>
+            <option value="17">Pichincha</option>
+            <option value="18">Tungurahua</option>
+            <option value="19">Zamora Chinchipe</option>
+            <option value="20">Galápagos</option>
+            <option value="21">Sucumbíos</option>
+            <option value="22">Orellana</option>
+            <option value="23">Santo Domingo de los Tsáchilas</option>
+            <option value="24">Santa Elena</option>
+            <option value="30">Extranjeros</option>
+        </select>
+        <span asp-validation-for="Provincia" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
         <label asp-for="Cedula" class="control-label"></label>
-        <input asp-for="Cedula" class="form-control" />
+        <input asp-for="Cedula" class="form-control" id="CedulaInput" readonly />
         <span asp-validation-for="Cedula" class="text-danger"></span>
     </div>
-    
+
     <div class="form-group">
         <label asp-for="Apellidos" class="control-label"></label>
-        <input asp-for="Apellidos" class="form-control" />
+        <input asp-for="Apellidos" class="form-control" id="Apellidos"/>
         <span asp-validation-for="Apellidos" class="text-danger"></span>
     </div>
-    
+
     <div class="form-group">
         <label asp-for="Nombres" class="control-label"></label>
-        <input asp-for="Nombres" class="form-control" />
+        <input asp-for="Nombres" class="form-control" id="Nombres"/>
         <span asp-validation-for="Nombres" class="text-danger"></span>
     </div>
-    
+
     <div class="form-group">
         <label asp-for="FechaNacimiento" class="control-label"></label>
-        <input asp-for="FechaNacimiento" type="date" class="form-control" />
+        <input asp-for="FechaNacimiento" class="form-control" type="date" id="FechaNacimiento"/>
         <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
     </div>
-    
+
     <div class="form-group">
         <label asp-for="Mail" class="control-label"></label>
-        <input asp-for="Mail" class="form-control" />
+        <input asp-for="Mail" class="form-control" type="email" id="Mail"/>
         <span asp-validation-for="Mail" class="text-danger"></span>
     </div>
-    
+
     <div class="form-group">
         <label asp-for="Telefono" class="control-label"></label>
-        <input asp-for="Telefono" class="form-control" />
+        <input asp-for="Telefono" class="form-control" id="Telefono" />
         <span asp-validation-for="Telefono" class="text-danger"></span>
     </div>
-    
+
     <div class="form-group">
         <label asp-for="Estado" class="control-label"></label>
-        <select asp-for="Estado" class="form-control">
+        <select asp-for="Estado" class="form-control" id="Estado">
             <option value="true">Activo</option>
             <option value="false">Inactivo</option>
         </select>
         <span asp-validation-for="Estado" class="text-danger"></span>
     </div>
-    
+
     <div class="form-group">
-        <input type="submit" value="Crear" class="btn btn-primary" />
+        <label asp-for="Saldo" class="control-label"></label>
+        <input asp-for="Saldo" class="form-control" id="SaldoInput" readonly />
+        <span asp-validation-for="Saldo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" id="submitButton" value="Crear" class="btn btn-primary" />
     </div>
 </form>
 
 <div>
     <a asp-action="Index">Regresar a la lista</a>
 </div>
+
+@section Scripts {
+    <script>
+        document.getElementById('ProvinciaSelect').addEventListener('change', function () {
+            var provincia = this.value;
+            var randomPart = Math.floor(Math.random() * 6000000).toString().padStart(6, '0');
+            var cedulaBase = provincia + randomPart;
+
+            // Calcular el dígito verificador
+            function calcularDigitoVerificador(cedulaBase) {
+                var total = 0;
+                for (var i = 0; i < 9; i++) {
+                    var numero = parseInt(cedulaBase.charAt(i));
+                    if (i % 2 === 0) { // posiciones impares
+                        numero *= 2;
+                        if (numero > 9) numero -= 9;
+                    }
+                    total += numero;
+                }
+                var digitoVerificador = (total % 10 === 0) ? 0 : (10 - total % 10);
+                return digitoVerificador;
+            }
+
+            var digitoVerificador = calcularDigitoVerificador(cedulaBase);
+            document.getElementById('CedulaInput').value = cedulaBase + digitoVerificador;
+        });
+
+        document.getElementById('SaldoInput').value = "0.00";
+    </script>
+}

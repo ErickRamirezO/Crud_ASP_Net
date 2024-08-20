@@ -115,3 +115,4 @@ D:\Pruebas de Software\aspnet\MSTest\obj\Debug\net8.0\MSTest.pdb
 D:\Pruebas de Software\aspnet\MSTest\obj\Debug\net8.0\MSTest.genruntimeconfig.cache
 D:\Pruebas de Software\aspnet\MSTest\obj\Debug\net8.0\ref\MSTest.dll
 D:\Pruebas de Software\aspnet\MSTest\obj\Debug\net8.0\MSTest.sourcelink.json
+D:\Pruebas de Software\aspnet\MSTest\bin\Debug\net8.0\SeleniumExtras.WaitHelpers.dll
