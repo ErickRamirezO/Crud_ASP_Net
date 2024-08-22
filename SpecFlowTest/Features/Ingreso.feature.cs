@@ -101,7 +101,7 @@ namespace SpecFlowTest.Features
                     "tag1"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ingreso de cliente", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 6
+#line 4
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -134,12 +134,12 @@ this.ScenarioInitialize(scenarioInfo);
                             "1726453617",
                             "Perez",
                             "Juan",
-                            "1990/01/01",
+                            "1990-01-01",
                             "0987654321",
                             "lasalle@hotmail.com",
                             "100",
                             "1"});
-#line 7
+#line 5
     testRunner.Given("Llenar los campos de la BDD", ((string)(null)), table1, "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -155,12 +155,12 @@ this.ScenarioInitialize(scenarioInfo);
                             "1726453617",
                             "Perez",
                             "Juan",
-                            "1990/01/01",
+                            "1990-01-01",
                             "0987654321",
                             "lasalle@hotmail.com",
                             "100",
                             "1"});
-#line 10
+#line 8
     testRunner.When("El registro se ingresa en la BDD", ((string)(null)), table2, "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -176,12 +176,12 @@ this.ScenarioInitialize(scenarioInfo);
                             "1726453617",
                             "Perez",
                             "Juan",
-                            "1990/01/01",
+                            "1990-01-01",
                             "0987654321",
                             "lasalle@hotmail.com",
                             "100",
                             "1"});
-#line 13
+#line 11
     testRunner.Then("El resultado se ingresa en la BDD", ((string)(null)), table3, "Then ");
 #line hidden
             }

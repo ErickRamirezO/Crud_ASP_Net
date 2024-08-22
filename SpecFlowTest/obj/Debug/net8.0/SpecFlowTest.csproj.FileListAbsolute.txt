@@ -1,3 +1,9 @@
+D:\Pruebas de Software\aspnet\SpecFlowTest\obj\Debug\net8.0\SpecFlowTest.csproj.AssemblyReference.cache
+D:\Pruebas de Software\aspnet\SpecFlowTest\obj\Debug\net8.0\SpecFlowTest.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pruebas de Software\aspnet\SpecFlowTest\obj\Debug\net8.0\SpecFlowTest.AssemblyInfoInputs.cache
+D:\Pruebas de Software\aspnet\SpecFlowTest\obj\Debug\net8.0\SpecFlowTest.AssemblyInfo.cs
+D:\Pruebas de Software\aspnet\SpecFlowTest\obj\Debug\net8.0\SpecFlowTest.csproj.CoreCompileInputs.cache
+D:\Pruebas de Software\aspnet\SpecFlowTest\obj\Debug\net8.0\SpecFlowTest.sourcelink.json
 D:\Pruebas de Software\aspnet\SpecFlowTest\bin\Debug\net8.0\LivingDoc.Dtos.dll
 D:\Pruebas de Software\aspnet\SpecFlowTest\bin\Debug\net8.0\LivingDoc.SpecFlowPlugin.dll
 D:\Pruebas de Software\aspnet\SpecFlowTest\bin\Debug\net8.0\TechTalk.SpecFlow.MSTest.SpecFlowPlugin.dll
@@ -120,12 +126,6 @@ D:\Pruebas de Software\aspnet\SpecFlowTest\bin\Debug\net8.0\runtimes\win\lib\net
 D:\Pruebas de Software\aspnet\SpecFlowTest\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\Pruebas de Software\aspnet\SpecFlowTest\bin\Debug\net8.0\WebApplication1.dll
 D:\Pruebas de Software\aspnet\SpecFlowTest\bin\Debug\net8.0\WebApplication1.pdb
-D:\Pruebas de Software\aspnet\SpecFlowTest\obj\Debug\net8.0\SpecFlowTest.csproj.AssemblyReference.cache
-D:\Pruebas de Software\aspnet\SpecFlowTest\obj\Debug\net8.0\SpecFlowTest.GeneratedMSBuildEditorConfig.editorconfig
-D:\Pruebas de Software\aspnet\SpecFlowTest\obj\Debug\net8.0\SpecFlowTest.AssemblyInfoInputs.cache
-D:\Pruebas de Software\aspnet\SpecFlowTest\obj\Debug\net8.0\SpecFlowTest.AssemblyInfo.cs
-D:\Pruebas de Software\aspnet\SpecFlowTest\obj\Debug\net8.0\SpecFlowTest.csproj.CoreCompileInputs.cache
-D:\Pruebas de Software\aspnet\SpecFlowTest\obj\Debug\net8.0\SpecFlowTest.sourcelink.json
 D:\Pruebas de Software\aspnet\SpecFlowTest\obj\Debug\net8.0\SpecFlow.4B1CFD4D.Up2Date
 D:\Pruebas de Software\aspnet\SpecFlowTest\obj\Debug\net8.0\SpecFlowTest.dll
 D:\Pruebas de Software\aspnet\SpecFlowTest\obj\Debug\net8.0\refint\SpecFlowTest.dll

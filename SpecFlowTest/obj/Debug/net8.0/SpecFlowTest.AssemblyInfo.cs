@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SpecFlowTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+087143069285f7ba14d39360964de4fe4d6015c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fc00a3f5d1ce2ae08727b455dd60bf3abe73dd9")]
 [assembly: System.Reflection.AssemblyProductAttribute("SpecFlowTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SpecFlowTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
